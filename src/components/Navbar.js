@@ -55,8 +55,12 @@ export default function Navbar() {
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 
           {/* Logo */}
-          <Link href="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-            <img src="/images/logo.png" alt="OZY Patent Danışmanlık" style={{ height: '50px', width: 'auto' }} />
+          <Link href="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', gap: '10px' }}>
+            <img src="/images/logo.png" alt="OZY Logo" style={{ height: '50px', width: 'auto' }} />
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <span style={{ fontSize: '2rem', fontWeight: '900', color: '#132B40', lineHeight: '1', letterSpacing: '-0.5px' }}>OZY</span>
+              <span style={{ fontSize: '0.65rem', fontWeight: '700', color: '#132B40', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Patent Danışmanlık</span>
+            </div>
           </Link>
 
           {/* Links */}
