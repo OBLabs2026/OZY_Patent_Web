@@ -142,44 +142,64 @@ export default function Home() {
       </section>
 
       {/* Why Us Section */}
-      <section style={{ padding: '80px 0' }}>
+      <section style={{ padding: '80px 0', backgroundColor: '#ffffff' }}>
         <div className="container">
-          <div style={{ display: 'flex', gap: '50px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '60px', alignItems: 'center', flexWrap: 'wrap' }}>
+            
+            {/* Left Content */}
             <div style={{ flex: '1 1 400px' }}>
-              <h2 style={{ fontSize: '2.5rem' }}>Neden OZY Patent?</h2>
-              <p style={{ marginTop: '20px', fontSize: '1.1rem', color: 'var(--text-muted)' }}>
-                Yılların getirdiği tecrübe, uzman vekil kadromuz ve şeffaf süreç yönetimimizle, fikirlerinizi sadece korumakla kalmıyor, onlara değer katıyoruz. Uluslararası partner ağımız sayesinde dünyanın her yerinde haklarınızı savunuyoruz.
-              </p>
-              <ul style={{ marginTop: '20px', listStyle: 'none' }}>
-                <li style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ color: 'var(--accent)' }}>&#10003;</span> Şeffaf Süreç Yönetimi
-                </li>
-                <li style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ color: 'var(--accent)' }}>&#10003;</span> Uzman Vekil Kadrosu
-                </li>
-                <li style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <span style={{ color: 'var(--accent)' }}>&#10003;</span> Global Partner Ağı
-                </li>
-              </ul>
+              <h2 style={{ fontSize: '2.2rem', fontWeight: '800', color: '#000', marginBottom: '40px', textTransform: 'uppercase' }}>
+                NEDEN OZY PATENT?
+              </h2>
+              
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
+                {/* Item 1 */}
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
+                  <img src="/images/01_madde.png" alt="01" style={{ width: '55px', height: '55px', objectFit: 'contain' }} />
+                  <div>
+                    <h4 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#000', marginBottom: '5px' }}>Uluslararası Deneyim</h4>
+                    <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: '1.6' }}>Uluslararası düzeyde edindiğimiz tecrübeyle fikirlerinizi global ölçekte güvenle koruyoruz.</p>
+                  </div>
+                </div>
+
+                {/* Item 2 */}
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
+                  <img src="/images/02_madde.png" alt="02" style={{ width: '55px', height: '55px', objectFit: 'contain' }} />
+                  <div>
+                    <h4 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#000', marginBottom: '5px' }}>Sektörel Uzmanlık</h4>
+                    <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: '1.6' }}>Farklı sektörlerdeki derin bilgi birikimimizle size özel, stratejik patent çözümleri sunuyoruz.</p>
+                  </div>
+                </div>
+
+                {/* Item 3 */}
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
+                  <img src="/images/03_madde.png" alt="03" style={{ width: '55px', height: '55px', objectFit: 'contain' }} />
+                  <div>
+                    <h4 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#000', marginBottom: '5px' }}>Entegre Çözümler</h4>
+                    <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: '1.6' }}>Marka, patent ve tasarım haklarınızı tek bir çatı altında entegre ve kusursuz bir süreçle yönetiyoruz.</p>
+                  </div>
+                </div>
+
+                {/* Item 4 */}
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
+                  <img src="/images/04_madde.png" alt="04" style={{ width: '55px', height: '55px', objectFit: 'contain' }} />
+                  <div>
+                    <h4 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#000', marginBottom: '5px' }}>Şeffaf Süreç Yönetimi</h4>
+                    <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: '1.6' }}>Tüm başvuru ve takip aşamalarında sizi anında bilgilendirerek %100 şeffaf bir hizmet sağlıyoruz.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div style={{ flex: '1 1 400px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-              <div className="glass-card" style={{ textAlign: 'center' }}>
-                <h3 style={{ color: 'var(--accent)', fontSize: '2rem' }}>10+</h3>
-                <p>Yıllık Deneyim</p>
-              </div>
-              <div className="glass-card" style={{ textAlign: 'center' }}>
-                <h3 style={{ color: 'var(--accent)', fontSize: '2rem' }}>5000+</h3>
-                <p>Tescilli Marka</p>
-              </div>
-              <div className="glass-card" style={{ textAlign: 'center' }}>
-                <h3 style={{ color: 'var(--accent)', fontSize: '2rem' }}>98%</h3>
-                <p>Başarı Oranı</p>
-              </div>
-              <div className="glass-card" style={{ textAlign: 'center' }}>
-                <h3 style={{ color: 'var(--accent)', fontSize: '2rem' }}>7/24</h3>
-                <p>Destek</p>
-              </div>
+
+            {/* Right Image */}
+            <div style={{ flex: '1 1 400px', display: 'flex', justifyContent: 'center' }}>
+              <img 
+                src="/images/neden_ozy.png" 
+                alt="Neden OZY Patent" 
+                style={{ width: '100%', maxWidth: '600px', height: 'auto', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} 
+              />
             </div>
+
           </div>
         </div>
       </section>
