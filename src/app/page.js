@@ -4,15 +4,31 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero" style={{ padding: '100px 0', background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)', color: 'white', textAlign: 'center' }}>
-        <div className="container">
-          <h1 style={{ color: 'white', fontSize: '3rem', marginBottom: '20px' }}>Fikirlerinizi Geleceğe Güvenle Taşıyın</h1>
-          <p style={{ fontSize: '1.2rem', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px', color: '#e0e0e0' }}>
-            OZY Patent ile marka, patent ve tasarım haklarınızı ulusal ve uluslararası arenada güvence altına alın. Uzman vekil kadromuzla yanınızdayız.
+      <section className="hero" style={{ 
+        padding: '120px 0', 
+        backgroundImage: 'url(/images/OZY_Banner.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        color: 'white', 
+        minHeight: '600px',
+        display: 'flex',
+        alignItems: 'center'
+      }}>
+        <div className="container" style={{ textAlign: 'left' }}>
+          <h1 style={{ color: 'white', fontSize: '3.8rem', fontWeight: '800', marginBottom: '20px', maxWidth: '650px', lineHeight: '1.1' }}>
+            FİKRİ MÜLKİYETİNİZİ<br/>GELECEĞE TAŞIYORUZ
+          </h1>
+          <p style={{ fontSize: '1.2rem', marginBottom: '50px', maxWidth: '600px', color: '#e0e0e0' }}>
+            OZY Patent Danışmanlık ile fikirlerinizi global ölçekte koruyun.
           </p>
-          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-            <Link href="/iletisim" className="btn-primary">Hemen Ücretsiz Sorgulama Yapın</Link>
-            <Link href="/hizmetlerimiz/marka-tescili" className="btn-secondary" style={{ borderColor: 'white', color: 'white' }}>Hizmetlerimizi İnceleyin</Link>
+          <div style={{ display: 'flex', gap: '20px' }}>
+            <Link href="/hizmetlerimiz" className="btn-primary" style={{ padding: '16px 32px', textTransform: 'uppercase', fontSize: '0.9rem', fontWeight: '700', letterSpacing: '1px' }}>
+              HİZMETLERİMİZİ KEŞFEDİN
+            </Link>
+            <Link href="/marka-sorgula" className="btn-secondary" style={{ padding: '16px 32px', textTransform: 'uppercase', fontSize: '0.9rem', fontWeight: '700', letterSpacing: '1px', borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
+              MARKA SORGULA
+            </Link>
           </div>
         </div>
       </section>
