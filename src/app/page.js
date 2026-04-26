@@ -82,55 +82,59 @@ export default function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '25px' }}>
             
             {/* Marka Tescili */}
-            <div style={{ backgroundColor: '#fff', borderRadius: '10px', padding: '35px 25px', textAlign: 'center', boxShadow: '0 2px 15px rgba(0,0,0,0.07)', border: '1px solid #eaeaea', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
-              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(19,43,64,0.15)'; }}
-              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='0 2px 15px rgba(0,0,0,0.07)'; }}>
-              <div style={{ width: '70px', height: '70px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                {/* İkon geldiğinde: <img src="/images/icon-marka.png" alt="Marka Tescili" style={{width:'100%'}} /> */}
-                <span style={{ fontSize: '3rem' }}>🏷️</span>
+            <div style={{ backgroundColor: '#fff', borderRadius: '8px', padding: '30px 20px', textAlign: 'center', border: '1px solid #CBA153', transition: 'transform 0.3s ease, box-shadow 0.3s ease', display: 'flex', flexDirection: 'column', height: '100%' }}
+              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(203, 161, 83, 0.2)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='none'; }}>
+              <div style={{ height: '80px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="/images/marka_tescili.png" alt="Marka Tescili" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
-              <h3 style={{ color: '#132B40', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Marka Tescili</h3>
-              <p style={{ color: '#667', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '20px' }}>OZY Patent Danışmanlık ile markanı global ölçekte koruyun.</p>
-              <Link href="/hizmetlerimiz/marka-tescili" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#132B40', color: 'white', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', textDecoration: 'none' }}>DETAYLI BİLGİ</Link>
+              <h3 style={{ color: '#000', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase' }}>Marka Tescili</h3>
+              <p style={{ color: '#333', fontSize: '0.85rem', lineHeight: '1.5', marginBottom: '20px', flexGrow: 1 }}>OZY Patent Danışmanlık ile markanızı global ölçekte koruyun.</p>
+              <Link href="/hizmetlerimiz/marka-tescili" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#5A6B7C', color: 'white', borderRadius: '4px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', textDecoration: 'none', transition: 'background-color 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.backgroundColor = '#425161'}
+                onMouseLeave={e => e.currentTarget.style.backgroundColor = '#5A6B7C'}>DETAYLI BİLGİ</Link>
             </div>
 
             {/* Patent Tescili */}
-            <div style={{ backgroundColor: '#fff', borderRadius: '10px', padding: '35px 25px', textAlign: 'center', boxShadow: '0 2px 15px rgba(0,0,0,0.07)', border: '1px solid #eaeaea', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
-              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(19,43,64,0.15)'; }}
-              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='0 2px 15px rgba(0,0,0,0.07)'; }}>
-              <div style={{ width: '70px', height: '70px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                {/* İkon geldiğinde: <img src="/images/icon-patent.png" alt="Patent Tescili" style={{width:'100%'}} /> */}
-                <span style={{ fontSize: '3rem' }}>⚙️</span>
+            <div style={{ backgroundColor: '#fff', borderRadius: '8px', padding: '30px 20px', textAlign: 'center', border: '1px solid #CBA153', transition: 'transform 0.3s ease, box-shadow 0.3s ease', display: 'flex', flexDirection: 'column', height: '100%' }}
+              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(203, 161, 83, 0.2)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='none'; }}>
+              <div style={{ height: '80px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="/images/patent_tescili.png" alt="Patent Tescili" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
-              <h3 style={{ color: '#132B40', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Patent Tescili</h3>
-              <p style={{ color: '#667', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '20px' }}>OZY Patent Danışmanlık ile buluşunu farklı ülkelerde global ölçekte üretin.</p>
-              <Link href="/hizmetlerimiz/patent-tescili" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#132B40', color: 'white', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', textDecoration: 'none' }}>DETAYLI BİLGİ</Link>
+              <h3 style={{ color: '#000', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase' }}>Patent Tescili</h3>
+              <p style={{ color: '#333', fontSize: '0.85rem', lineHeight: '1.5', marginBottom: '20px', flexGrow: 1 }}>OZY Patent Danışmanlık ile buluşunuzu global ölçekte koruyun.</p>
+              <Link href="/hizmetlerimiz/patent-tescili" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#5A6B7C', color: 'white', borderRadius: '4px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', textDecoration: 'none', transition: 'background-color 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.backgroundColor = '#425161'}
+                onMouseLeave={e => e.currentTarget.style.backgroundColor = '#5A6B7C'}>DETAYLI BİLGİ</Link>
             </div>
 
             {/* Tasarım Tescili */}
-            <div style={{ backgroundColor: '#fff', borderRadius: '10px', padding: '35px 25px', textAlign: 'center', boxShadow: '0 2px 15px rgba(0,0,0,0.07)', border: '1px solid #eaeaea', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
-              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(19,43,64,0.15)'; }}
-              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='0 2px 15px rgba(0,0,0,0.07)'; }}>
-              <div style={{ width: '70px', height: '70px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                {/* İkon geldiğinde: <img src="/images/icon-tasarim.png" alt="Tasarım Tescili" style={{width:'100%'}} /> */}
-                <span style={{ fontSize: '3rem' }}>🖌️</span>
+            <div style={{ backgroundColor: '#fff', borderRadius: '8px', padding: '30px 20px', textAlign: 'center', border: '1px solid #CBA153', transition: 'transform 0.3s ease, box-shadow 0.3s ease', display: 'flex', flexDirection: 'column', height: '100%' }}
+              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(203, 161, 83, 0.2)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='none'; }}>
+              <div style={{ height: '80px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="/images/tasarım_tescili.png" alt="Tasarım Tescili" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
-              <h3 style={{ color: '#132B40', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Tasarım Tescili</h3>
-              <p style={{ color: '#667', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '20px' }}>Tasarım bütün unsurların çizimle ifade üretilmesi tescil edilmesi.</p>
-              <Link href="/hizmetlerimiz/tasarim-tescili" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#132B40', color: 'white', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', textDecoration: 'none' }}>DETAYLI BİLGİ</Link>
+              <h3 style={{ color: '#000', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase' }}>Tasarım Tescili</h3>
+              <p style={{ color: '#333', fontSize: '0.85rem', lineHeight: '1.5', marginBottom: '20px', flexGrow: 1 }}>Tasarımın bütün unsurlarının çizimle ifade edilmesi ve tescil edilmesi.</p>
+              <Link href="/hizmetlerimiz/tasarim-tescili" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#5A6B7C', color: 'white', borderRadius: '4px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', textDecoration: 'none', transition: 'background-color 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.backgroundColor = '#425161'}
+                onMouseLeave={e => e.currentTarget.style.backgroundColor = '#5A6B7C'}>DETAYLI BİLGİ</Link>
             </div>
 
             {/* Faydalı Model */}
-            <div style={{ backgroundColor: '#fff', borderRadius: '10px', padding: '35px 25px', textAlign: 'center', boxShadow: '0 2px 15px rgba(0,0,0,0.07)', border: '1px solid #eaeaea', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
-              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(19,43,64,0.15)'; }}
-              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='0 2px 15px rgba(0,0,0,0.07)'; }}>
-              <div style={{ width: '70px', height: '70px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                {/* İkon geldiğinde: <img src="/images/icon-faydali.png" alt="Faydalı Model" style={{width:'100%'}} /> */}
-                <span style={{ fontSize: '3rem' }}>🔧</span>
+            <div style={{ backgroundColor: '#fff', borderRadius: '8px', padding: '30px 20px', textAlign: 'center', border: '1px solid #CBA153', transition: 'transform 0.3s ease, box-shadow 0.3s ease', display: 'flex', flexDirection: 'column', height: '100%' }}
+              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(203, 161, 83, 0.2)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='none'; }}>
+              <div style={{ height: '80px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="/images/faydalı_model.png" alt="Faydalı Model" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
-              <h3 style={{ color: '#132B40', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Faydalı Model</h3>
-              <p style={{ color: '#667', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '20px' }}>OZY Patent Danışmanlık ile buluşunu güvence altına üretebilir sur oluşturun.</p>
-              <Link href="/hizmetlerimiz/faydali-model" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#132B40', color: 'white', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', textDecoration: 'none' }}>DETAYLI BİLGİ</Link>
+              <h3 style={{ color: '#000', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase' }}>Faydalı Model</h3>
+              <p style={{ color: '#333', fontSize: '0.85rem', lineHeight: '1.5', marginBottom: '20px', flexGrow: 1 }}>OZY Patent Danışmanlık ile buluşunuzu güvence altına alıp koruma oluşturun.</p>
+              <Link href="/hizmetlerimiz/faydali-model" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#5A6B7C', color: 'white', borderRadius: '4px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', textDecoration: 'none', transition: 'background-color 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.backgroundColor = '#425161'}
+                onMouseLeave={e => e.currentTarget.style.backgroundColor = '#5A6B7C'}>DETAYLI BİLGİ</Link>
             </div>
 
           </div>
