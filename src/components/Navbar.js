@@ -73,17 +73,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* OZY Banner - Full Width below Navbar */}
-      <div style={{ width: '100%', lineHeight: 0 }}>
-        <Image
-          src="/images/OZY_Banner.png"
-          alt="OZY Patent Banner"
-          width={1920}
-          height={400}
-          style={{ width: '100%', height: 'auto', display: 'block' }}
-          priority
-        />
-      </div>
+
     </header>
   );
 }
