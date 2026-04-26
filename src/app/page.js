@@ -7,30 +7,69 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="hero" style={{ 
-        padding: '80px 0', 
-        backgroundColor: '#132B40',
+        padding: '120px 0', 
+        backgroundImage: 'url(/images/1.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         color: 'white', 
-        minHeight: '340px',
+        minHeight: '500px',
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        position: 'relative',
+        boxShadow: 'inset 0 0 100px rgba(0,0,0,0.5)' // Gives it a nice depth
       }}>
-        <div className="container" style={{ textAlign: 'left' }}>
-          <h1 style={{ color: 'white', fontSize: '3.8rem', fontWeight: '800', marginBottom: '20px', maxWidth: '650px', lineHeight: '1.1' }}>
+        {/* Optional overlay for better text readability if the image is bright */}
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(10, 20, 35, 0.4)', zIndex: 1 }}></div>
+
+        <div className="container" style={{ textAlign: 'left', position: 'relative', zIndex: 2 }}>
+          <h1 style={{ color: 'white', fontSize: '3.8rem', fontWeight: '800', marginBottom: '15px', maxWidth: '700px', lineHeight: '1.1', textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}>
             FİKRİ MÜLKİYETİNİZİ<br/>GELECEĞE TAŞIYORUZ
           </h1>
-          <p style={{ fontSize: '1.2rem', marginBottom: '50px', maxWidth: '600px', color: '#e0e0e0' }}>
+          <p style={{ fontSize: '1.2rem', marginBottom: '40px', maxWidth: '600px', color: '#f0f0f0', textShadow: '1px 1px 4px rgba(0,0,0,0.8)', fontWeight: '400' }}>
             OZY Patent Danışmanlık ile fikirlerinizi global ölçekte koruyun.
           </p>
           <div style={{ display: 'flex', gap: '20px' }}>
-            <Link href="/hizmetlerimiz" className="btn-primary" style={{ padding: '16px 32px', textTransform: 'uppercase', fontSize: '0.9rem', fontWeight: '700', letterSpacing: '1px' }}>
+            <Link href="/hizmetlerimiz" style={{ 
+              padding: '14px 28px', 
+              backgroundColor: '#CBA153', // Gold color from design
+              color: '#ffffff', 
+              textTransform: 'uppercase', 
+              fontSize: '0.9rem', 
+              fontWeight: '700', 
+              letterSpacing: '1px',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              boxShadow: '0 4px 15px rgba(203, 161, 83, 0.4)',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 6px 20px rgba(203, 161, 83, 0.6)'; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 15px rgba(203, 161, 83, 0.4)'; }}
+            >
               HİZMETLERİMİZİ KEŞFEDİN
             </Link>
-            <Link href="/marka-sorgula" className="btn-secondary" style={{ padding: '16px 32px', textTransform: 'uppercase', fontSize: '0.9rem', fontWeight: '700', letterSpacing: '1px', borderColor: 'rgba(255,255,255,0.4)', color: 'white' }}>
+            <Link href="/marka-sorgula" style={{ 
+              padding: '14px 28px', 
+              backgroundColor: 'transparent',
+              border: '2px solid rgba(255,255,255,0.6)', 
+              color: 'white', 
+              textTransform: 'uppercase', 
+              fontSize: '0.9rem', 
+              fontWeight: '700', 
+              letterSpacing: '1px',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.borderColor = '#ffffff'; }}
+            onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.6)'; }}
+            >
               MARKA SORGULA
             </Link>
           </div>
         </div>
       </section>
+
 
 
       {/* Services Section - Section 2 */}
