@@ -16,36 +16,31 @@ export default function Navbar() {
       <div style={{ backgroundColor: '#132B40', padding: '8px 0', fontSize: '0.85rem', color: '#e0e0e0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
           {/* Language Selector */}
-          <div style={{ position: 'relative' }}>
-            <button
-              onClick={() => setLangOpen(!langOpen)}
-              style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', fontWeight: '600', background: 'none', border: 'none', color: '#e0e0e0', fontSize: '0.85rem', padding: '4px 8px', borderRadius: '4px' }}
-            >
-              <span style={{ color: '#4FC3F7', fontSize: '1rem' }}>🌐</span>
-              {lang}
-              <span style={{ fontSize: '0.65rem', transition: 'transform 0.2s', transform: langOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>▼</span>
-            </button>
-            {langOpen && (
-              <div style={{ position: 'absolute', right: 0, top: '110%', backgroundColor: '#1a3a54', borderRadius: '6px', overflow: 'hidden', boxShadow: '0 8px 24px rgba(0,0,0,0.3)', zIndex: 100, minWidth: '80px' }}>
-                {languages.map((l) => (
-                  <button
-                    key={l}
-                    onClick={() => { setLang(l); setLangOpen(false); }}
-                    style={{
-                      display: 'block', width: '100%', textAlign: 'left', padding: '8px 16px',
-                      background: l === lang ? '#CBA153' : 'none',
-                      color: l === lang ? '#fff' : '#e0e0e0',
-                      border: 'none', cursor: 'pointer', fontSize: '0.85rem', fontWeight: '600',
-                      transition: 'background 0.2s'
-                    }}
-                    onMouseEnter={e => { if (l !== lang) e.currentTarget.style.background = 'rgba(203,161,83,0.2)'; }}
-                    onMouseLeave={e => { if (l !== lang) e.currentTarget.style.background = 'none'; }}
-                  >
-                    {l}
-                  </button>
-                ))}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', fontWeight: '600' }}>
+            {languages.map((l, index) => (
+              <div key={l} style={{ display: 'flex', alignItems: 'center' }}>
+                <button
+                  onClick={() => setLang(l)}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: l === lang ? '#CBA153' : '#e0e0e0',
+                    cursor: 'pointer',
+                    fontSize: '0.85rem',
+                    fontWeight: '600',
+                    padding: '0',
+                    transition: 'color 0.2s'
+                  }}
+                  onMouseEnter={e => { if (l !== lang) e.currentTarget.style.color = '#fff'; }}
+                  onMouseLeave={e => { if (l !== lang) e.currentTarget.style.color = '#e0e0e0'; }}
+                >
+                  {l}
+                </button>
+                {index < languages.length - 1 && (
+                  <span style={{ color: 'rgba(255,255,255,0.3)', margin: '0 8px' }}>|</span>
+                )}
               </div>
-            )}
+            ))}
           </div>
         </div>
       </div>
