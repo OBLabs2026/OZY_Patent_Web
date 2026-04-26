@@ -5,13 +5,10 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="hero" style={{ 
-        padding: '120px 0', 
-        backgroundImage: 'url(/images/OZY_Banner.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        padding: '80px 0', 
+        backgroundColor: '#132B40',
         color: 'white', 
-        minHeight: '600px',
+        minHeight: '340px',
         display: 'flex',
         alignItems: 'center'
       }}>
@@ -32,6 +29,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
       {/* Services Section - Section 2 */}
       <section style={{ padding: '80px 0', backgroundColor: '#f7f8fc' }}>
