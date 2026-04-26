@@ -127,8 +127,20 @@ ul {
   gap: 30px;
 }
 
-.nav-links a:hover {
-  color: var(--accent);
+.nav-link {
+  color: #132B40;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  font-family: var(--font-inter);
+}
+
+.nav-link:hover {
+  color: #CBA153;
+}
+
+.nav-link.active {
+  color: #CBA153;
 }
 
 .footer {

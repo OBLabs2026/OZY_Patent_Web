@@ -33,26 +33,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section style={{ padding: '80px 0', backgroundColor: 'var(--surface)' }}>
+      {/* Services Section - Section 2 */}
+      <section style={{ padding: '80px 0', backgroundColor: '#f7f8fc' }}>
         <div className="container">
-          <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '50px' }}>Hizmetlerimiz</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-            <div className="glass-card">
-              <h3>Marka Tescili</h3>
-              <p>Ticari itibarınızı ve kurumsal kimliğinizi koruma altına alarak taklit edilme riskini ortadan kaldırın.</p>
-              <Link href="/hizmetlerimiz/marka-tescili" style={{ color: 'var(--accent)', fontWeight: 'bold', display: 'inline-block', marginTop: '15px' }}>Detaylı Bilgi &rarr;</Link>
+          <h2 style={{ textAlign: 'center', fontSize: '2rem', fontWeight: '800', color: '#132B40', marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '1px' }}>
+            ÖNE ÇIKAN HİZMETLERİMİZ
+          </h2>
+          <div style={{ width: '60px', height: '3px', backgroundColor: '#CBA153', margin: '0 auto 50px' }}></div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '25px' }}>
+            
+            {/* Marka Tescili */}
+            <div style={{ backgroundColor: '#fff', borderRadius: '10px', padding: '35px 25px', textAlign: 'center', boxShadow: '0 2px 15px rgba(0,0,0,0.07)', border: '1px solid #eaeaea', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
+              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(19,43,64,0.15)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='0 2px 15px rgba(0,0,0,0.07)'; }}>
+              <div style={{ width: '70px', height: '70px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {/* İkon geldiğinde: <img src="/images/icon-marka.png" alt="Marka Tescili" style={{width:'100%'}} /> */}
+                <span style={{ fontSize: '3rem' }}>🏷️</span>
+              </div>
+              <h3 style={{ color: '#132B40', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Marka Tescili</h3>
+              <p style={{ color: '#667', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '20px' }}>OZY Patent Danışmanlık ile markanı global ölçekte koruyun.</p>
+              <Link href="/hizmetlerimiz/marka-tescili" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#132B40', color: 'white', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', textDecoration: 'none' }}>DETAYLI BİLGİ</Link>
             </div>
-            <div className="glass-card">
-              <h3>Patent Tescili</h3>
-              <p>Geliştirdiğiniz yenilikçi buluşların üçüncü kişiler tarafından izinsiz kullanılmasını engelleyin.</p>
-              <Link href="/hizmetlerimiz/patent-tescili" style={{ color: 'var(--accent)', fontWeight: 'bold', display: 'inline-block', marginTop: '15px' }}>Detaylı Bilgi &rarr;</Link>
+
+            {/* Patent Tescili */}
+            <div style={{ backgroundColor: '#fff', borderRadius: '10px', padding: '35px 25px', textAlign: 'center', boxShadow: '0 2px 15px rgba(0,0,0,0.07)', border: '1px solid #eaeaea', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
+              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(19,43,64,0.15)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='0 2px 15px rgba(0,0,0,0.07)'; }}>
+              <div style={{ width: '70px', height: '70px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {/* İkon geldiğinde: <img src="/images/icon-patent.png" alt="Patent Tescili" style={{width:'100%'}} /> */}
+                <span style={{ fontSize: '3rem' }}>⚙️</span>
+              </div>
+              <h3 style={{ color: '#132B40', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Patent Tescili</h3>
+              <p style={{ color: '#667', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '20px' }}>OZY Patent Danışmanlık ile buluşunu farklı ülkelerde global ölçekte üretin.</p>
+              <Link href="/hizmetlerimiz/patent-tescili" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#132B40', color: 'white', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', textDecoration: 'none' }}>DETAYLI BİLGİ</Link>
             </div>
-            <div className="glass-card">
-              <h3>Tasarım Tescili</h3>
-              <p>Ürünlerinizin estetik ve görsel özelliklerini hukuki güvence altına alarak rekabette öne geçin.</p>
-              <Link href="/hizmetlerimiz/tasarim-tescili" style={{ color: 'var(--accent)', fontWeight: 'bold', display: 'inline-block', marginTop: '15px' }}>Detaylı Bilgi &rarr;</Link>
+
+            {/* Tasarım Tescili */}
+            <div style={{ backgroundColor: '#fff', borderRadius: '10px', padding: '35px 25px', textAlign: 'center', boxShadow: '0 2px 15px rgba(0,0,0,0.07)', border: '1px solid #eaeaea', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
+              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(19,43,64,0.15)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='0 2px 15px rgba(0,0,0,0.07)'; }}>
+              <div style={{ width: '70px', height: '70px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {/* İkon geldiğinde: <img src="/images/icon-tasarim.png" alt="Tasarım Tescili" style={{width:'100%'}} /> */}
+                <span style={{ fontSize: '3rem' }}>🖌️</span>
+              </div>
+              <h3 style={{ color: '#132B40', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Tasarım Tescili</h3>
+              <p style={{ color: '#667', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '20px' }}>Tasarım bütün unsurların çizimle ifade üretilmesi tescil edilmesi.</p>
+              <Link href="/hizmetlerimiz/tasarim-tescili" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#132B40', color: 'white', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', textDecoration: 'none' }}>DETAYLI BİLGİ</Link>
             </div>
+
+            {/* Faydalı Model */}
+            <div style={{ backgroundColor: '#fff', borderRadius: '10px', padding: '35px 25px', textAlign: 'center', boxShadow: '0 2px 15px rgba(0,0,0,0.07)', border: '1px solid #eaeaea', transition: 'transform 0.3s ease, box-shadow 0.3s ease' }}
+              onMouseEnter={e => { e.currentTarget.style.transform='translateY(-6px)'; e.currentTarget.style.boxShadow='0 10px 30px rgba(19,43,64,0.15)'; }}
+              onMouseLeave={e => { e.currentTarget.style.transform='translateY(0)'; e.currentTarget.style.boxShadow='0 2px 15px rgba(0,0,0,0.07)'; }}>
+              <div style={{ width: '70px', height: '70px', margin: '0 auto 20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {/* İkon geldiğinde: <img src="/images/icon-faydali.png" alt="Faydalı Model" style={{width:'100%'}} /> */}
+                <span style={{ fontSize: '3rem' }}>🔧</span>
+              </div>
+              <h3 style={{ color: '#132B40', fontSize: '1.1rem', fontWeight: '800', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Faydalı Model</h3>
+              <p style={{ color: '#667', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '20px' }}>OZY Patent Danışmanlık ile buluşunu güvence altına üretebilir sur oluşturun.</p>
+              <Link href="/hizmetlerimiz/faydali-model" style={{ display: 'inline-block', padding: '10px 24px', backgroundColor: '#132B40', color: 'white', borderRadius: '5px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', textDecoration: 'none' }}>DETAYLI BİLGİ</Link>
+            </div>
+
           </div>
         </div>
       </section>

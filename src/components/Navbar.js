@@ -4,42 +4,34 @@ export default function Navbar() {
   return (
     <header>
       {/* Top Bar */}
-      <div style={{ backgroundColor: 'var(--primary-dark)', padding: '8px 0', fontSize: '0.8rem', color: '#e0e0e0' }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'flex-end', gap: '15px', alignItems: 'center' }}>
-          <span style={{ display: 'flex', alignItems: 'center', gap: '5px', cursor: 'pointer' }}>
-            🌐 ENG / TUR / FRA 
-            <span style={{ fontSize: '0.6rem' }}>▼</span>
+      <div style={{ backgroundColor: '#132B40', padding: '8px 0', fontSize: '0.85rem', color: '#e0e0e0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+        <div className="container" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontWeight: '500' }}>
+            <span style={{ color: '#4FC3F7', fontSize: '1rem' }}>🌐</span> ENG / TUR / FRA <span style={{ fontSize: '0.7rem' }}>▼</span>
           </span>
         </div>
       </div>
 
       {/* Main Navbar */}
-      <nav className="navbar" style={{ backgroundColor: 'var(--white)', color: 'var(--primary)', padding: '20px 0', borderBottom: '1px solid #eaeaea' }}>
+      <nav className="navbar" style={{ backgroundColor: '#FFFFFF', padding: '15px 0', borderBottom: '1px solid #eaeaea' }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           
-          {/* Logo Placeholder */}
-          <Link href="/" className="nav-brand" style={{ color: 'var(--primary-dark)', display: 'flex', alignItems: 'center', gap: '10px' }}>
-             <span style={{ fontSize: '2rem' }}>🛡️</span>
-             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
-                <span style={{ fontSize: '1.8rem', fontWeight: '800' }}>OZY</span>
-                <span style={{ fontSize: '0.65rem', letterSpacing: '1.5px', fontWeight: '600' }}>PATENT DANIŞMANLIK</span>
-             </div>
+          {/* Logo */}
+          <Link href="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+             <img src="/images/logo.png" alt="OZY Patent Danışmanlık" style={{ height: '50px', width: 'auto' }} />
           </Link>
 
           {/* Links */}
-          <div className="nav-links" style={{ display: 'flex', gap: '30px', fontSize: '0.9rem', fontWeight: '700' }}>
-            <Link href="/" style={{ color: 'var(--accent)' }}>ANA SAYFA</Link>
-            <Link href="/hizmetlerimiz" style={{ color: 'var(--primary-dark)' }}>HİZMETLER</Link>
-            <Link href="/sektorler" style={{ color: 'var(--primary-dark)' }}>SEKTÖRLER</Link>
-            <Link href="/online-islemler" style={{ color: 'var(--primary-dark)' }}>ONLİNE İŞLEMLER</Link>
-            <Link href="/bilgi-merkezi" style={{ color: 'var(--primary-dark)' }}>BİLGİ MERKEZİ</Link>
-            <Link href="/iletisim" style={{ color: 'var(--primary-dark)' }}>İLETİŞİM</Link>
+          <div className="nav-links" style={{ display: 'flex', gap: '25px', alignItems: 'center' }}>
+            <Link href="/" className="nav-link active">ANA SAYFA</Link>
+            <Link href="/hizmetler" className="nav-link">HİZMETLER</Link>
+            <Link href="/sektorler" className="nav-link">SEKTÖRLER</Link>
+            <Link href="/online-islemler" className="nav-link">ONLİNE İŞLEMLER</Link>
+            <Link href="/bilgi-merkezi" className="nav-link">BİLGİ MERKEZİ</Link>
+            <Link href="/iletisim" className="nav-link">İLETİŞİM</Link>
+            <span style={{ marginLeft: '10px', cursor: 'pointer', fontSize: '1.2rem' }}>🔍</span>
           </div>
 
-          {/* Search Icon */}
-          <div style={{ cursor: 'pointer', fontSize: '1.2rem', color: 'var(--primary-dark)' }}>
-            🔍
-          </div>
         </div>
       </nav>
     </header>
